@@ -28,7 +28,7 @@ if (Meteor.isClient) {
           if (count >= EXPIRY) {
             Session.set("imgUrl", "");
 
-            Meteor.clearInterval(intervalId)
+            Meteor.clearInterval(intervalId);
           }
         }, 1000);
 
@@ -41,7 +41,7 @@ if (Meteor.isClient) {
 }
 
 if (Meteor.isServer) {
-  var SECRET = "Z3IYZSH2UJA7VN3QYFVSVCF7PI"
+  var SECRET = "Z3IYZSH2UJA7VN3QYFVSVCF7PI";
 
   Meteor.methods({
     getUrl: function () {
